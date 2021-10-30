@@ -1,0 +1,148 @@
+//page_top・text設定
+@use "../../foundation/mixin";
+
+.p-page {
+&__top {
+    display: flex;
+    align-items: center;
+    .p-page__title {
+        font-family: "m-plus-1m", sans-serif;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 3.75rem;
+        padding-left: 4.5%;
+        @include mixin.breakpoint( sp ) {
+            font-size: 2.25rem;
+            padding-left: 3.1%;
+        };
+    }
+}
+    
+    
+    /*&__wrap {
+        padding: 60px 5.2%;
+        @include tab {
+            padding: 60px 7.2%;
+        }
+        &__text {
+            *{
+                padding-bottom: 60px;
+            }
+            h2,h3,h4,h5,h6 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+            }
+            h2 {
+                font-size: 2.25rem;
+            }
+            p {
+                font-family: "m-plus-1m", sans-serif;
+                font-size: 1rem;
+                line-height: 1.6;
+                text-align: justify;
+            }
+            h3 {
+                font-size: 1.75rem;
+            }
+            h4,h5,h6 {
+                font-size: 1.25rem;
+            }
+        }
+        &__quote {
+            width: 100%;
+            height: auto;
+            background-color: #F5F5F5;
+            font-family: "m-plus-1m", sans-serif;
+            padding: 60px 3.1% 60px 2.6%;
+            @include tab {
+                padding: 60px 6.7% 60px 6%;
+            }
+            * {
+                font-size: 1rem;
+            }
+            blockquote {
+                line-height: 1.5;
+                margin: 0;
+                padding-bottom: 60px;
+                text-align: justify;
+            }
+            >p {
+                padding-left: 6%;
+            }
+            a {
+                padding-left: 1.2%;
+                text-decoration: underline solid #707070;
+            }
+        }
+        &__list {
+            width: 100%;
+            padding: 40px 5.2% 60px 7.8%;
+            font-family: "m-plus-1m", sans-serif;
+            font-size: 1rem;
+            @include tab {
+                padding: 60px 7.2% 60px 13.2%;
+            };
+            @include sp {
+                padding: 30px 5.3%;
+            }
+            ol {
+                line-height: 1.6;
+                padding-bottom: 60px;
+                padding-left: 2.6%;
+                @include tab {
+                    padding-left: 20px 4.2%;
+                };
+                @include sp {
+                    padding-left: 20px 7.2%;
+                };
+                li {
+                    list-style: decimal;
+                    ol {
+                        padding: 20px 0.95%;
+                        @include tab {
+                            padding: 20px 2.15%;
+                        };
+                        @include sp {
+                            padding: 20px 4.8%;
+                        };
+                    }
+                }
+            }
+            ul {
+                line-height: 1.6;
+                li {
+                    padding: 0;
+                    ul {
+                        padding: 20px 0.95%;
+                        @include tab {
+                            padding: 20px 2.15%;
+                        };
+                        @include sp {
+                            padding: 20px 4.8%;
+                        };
+                    }
+                }
+            }
+        }
+        &__code {
+            width: 89.6%;
+            height: 237px;
+            background-color: #F5F5F5;
+            margin: 0 5.2%;
+            padding: 46px 3.1% 46px 2.6%;
+            @include tab {
+                margin: 0 7.2%;
+                padding: 46px 8.2% 46px 6%;
+            };
+            @include sp {
+                margin: 0 5.3%;
+                padding: 46px 15.7% 46px 13.3%;
+            };
+            code {
+                font-size: 1rem;
+                color: #3C2A10;
+                line-height: 1.6;
+            }
+        }
+    }*/
+}

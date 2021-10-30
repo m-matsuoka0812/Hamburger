@@ -1,0 +1,43 @@
+@use "../foundation/mixin";
+
+.l-sidebar {
+    @include mixin.breakpoint( tablet ) {
+        padding-top: 212px;
+        height: 1826px;
+    };
+    @include mixin.breakpoint( sp ) {
+        height: 2716px;
+    };
+    &__menu {
+        font-family: "roboto", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        display: block;
+        color: #707070;
+        padding-top: 82px;
+        padding-bottom: 85px;
+        padding-left: 12.5%;
+        @include mixin.breakpoint( tablet ) {
+            display: none;
+        };
+        &__list {
+            font-family: "roboto", sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #707070;
+            padding-left: 12.5%;
+        }
+        &__block {
+            padding: 40px 0 17px 18%;
+            li {
+                padding-bottom: 23px;
+            }
+        }
+        &__merchandise {
+            font-family: "m-plus-1m", sans-serif;
+            font-weight: normal;
+            font-size: 1.25rem; 
+            color: #707070;
+        }
+    }
+}

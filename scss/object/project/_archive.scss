@@ -1,0 +1,103 @@
+////archive,archive-search設定
+@use "../../foundation/mixin";
+
+.p-archive {
+    display: flex;
+    align-items: center;
+    @include mixin.breakpoint( sp ) {
+        //display: inline-block;
+        padding: 0;
+    };
+    &__title {
+        font-family: "roboto", sans-serif;
+        color: #fff;
+        font-size: 3.75rem;
+        padding-left: 86px;
+        @include mixin.breakpoint( sp ) {
+            font-size: 2.25rem;
+            padding-left: 37px;
+        }
+    }
+    &__subtitle {
+        font-family: "m-plus-1m", sans-serif;
+        font-weight: bold;
+        color: #fff;
+        font-size: 1rem;
+        padding-left: 20px;
+        padding-top: 10px;
+        @include mixin.breakpoint( sp ) {
+            padding-left: 37px;
+        }
+    }
+}
+
+.p-archive {
+    &__card {
+        display: flex;
+        padding: 0 6.44%;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+        max-height: 471px;
+        @include mixin.breakpoint( sp ) {
+            flex-direction: column;
+            padding: 0 5%;
+            margin-bottom: 20.9px;
+            max-height: 585.12px;
+        }
+        &__intro {
+            background-color: #3C2B1C;
+            width: 100%;
+            height: auto;
+            padding: 53px 7.7% 60px 4.6%;
+            @include mixin.breakpoint( tablet ) {
+                padding: 30px 7.7% 40px 4.6%;
+            };
+            @include mixin.breakpoint( sp ) {
+                height: 354.6px;
+                padding: 31.5px 21.7% 43.7px 5%;
+            };
+            h3 {
+                font-family: "m-plus-1m", sans-serif;
+                color: #fff;
+                font-size: 2.25rem;
+                font-weight: 500;
+                margin: 0;
+                @include mixin.breakpoint( tablet ) {
+                    font-size: 1.25rem;
+                };
+            }
+            h4 {
+                font-family: "m-plus-1m", sans-serif;
+                color: #fff;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-top: 30px;
+                margin: 0;
+                @include mixin.breakpoint( tablet ) {
+                    font-size: 1rem;
+                    padding-top: 24px;
+                }
+            }
+            p {
+                font-family: "m-plus-1m", sans-serif;
+                color: #fff;
+                font-size: 1rem;
+                padding-top: 15px;
+                padding-bottom: 60px;
+                margin: 0;
+                line-height: 1.6;
+                @include mixin.breakpoint( tablet ) {
+                    padding-top: 10px;
+                    padding-bottom: 45px;
+                };
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 0;
+                    margin-bottom: 40px;
+                    overflow: hidden;
+                    height: 114px;
+                }
+            }
+        }
+    }
+}

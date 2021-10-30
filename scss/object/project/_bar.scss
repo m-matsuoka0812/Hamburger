@@ -1,0 +1,30 @@
+//レスポンシブ化に伴うサイドバー設定
+@use "../../foundation/mixin";
+
+.p-bar {
+    display: none;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    z-index: 100;
+    //background-color: #fff7ef;
+    text-align: right;
+    @include mixin.breakpoint( tablet ) {
+        display: block;
+    };
+    &__button {
+        position: absolute;
+        top: 18px;
+        right: 26px;
+        color: #707070;
+        font-size: 2.125rem;
+        font-family: "roboto" sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #fff7ef;
+        border: none;
+        @include mixin.breakpoint( sp ) {
+            font-size: 1.25rem;
+        };
+    }
+}

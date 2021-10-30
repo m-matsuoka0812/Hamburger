@@ -1,0 +1,110 @@
+//archive・archive-search comments設定
+@use "../../foundation/mixin";
+
+.c-comments {
+    padding: 60px 6.44% 70px 6.44%;
+    @include mixin.breakpoint( tablet ) {
+        padding: 36px 6.44% 37px 6.44%;
+    };
+    @include mixin.breakpoint( sp ) {
+        padding: 30px 4.8% 19px 4.8%;
+    };
+    &__title {
+        font-family: "m-plus-1m", sans-serif;
+        font-size: 2.25rem;
+        font-weight: bold;
+        @include mixin.breakpoint( sp ) {
+            font-size: 1.75rem;
+        };
+    }
+    &__text {
+        font-family: "m-plus-1m", sans-serif;
+        font-size: 1rem;
+        padding-top: 25px;
+        line-height: 1.8;
+        text-align: justify;
+        @include mixin.breakpoint( sp ) {
+            padding-top: 30px;
+        };
+    }
+}
+
+//single・page comments設定
+
+.c-comments{
+    &__block {
+        padding: 60px 5.2%;
+        @include mixin.breakpoint( tablet ) {
+            padding: 60px 7.2%;
+        }
+        &__text {
+            *{
+                padding-bottom: 60px;
+            }
+            h2,h3,h4,h5,h6 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+            }
+            h2 {
+                font-size: 2.25rem;
+            }
+            p {
+                font-family: "m-plus-1m", sans-serif;
+                font-size: 1rem;
+                line-height: 1.6;
+                text-align: justify;
+            }
+            h3 {
+                font-size: 1.75rem;
+            }
+            h4,h5,h6 {
+                font-size: 1.25rem;
+            }
+        }
+        .c-comments__text__copy {
+            width: 100%;
+            height: auto;
+            background-color: #F5F5F5;
+            font-family: "m-plus-1m", sans-serif;
+            padding: 60px 3.1% 60px 2.6%;
+            @include mixin.breakpoint( tablet ) {
+                padding: 60px 6.7% 60px 6%;
+            }
+            * {
+                font-size: 1rem;
+            }
+            blockquote {
+                line-height: 1.5;
+                margin: 0;
+                padding-bottom: 60px;
+                text-align: justify;
+            }
+            >p {
+                padding-left: 6%;
+            }
+            a {
+                padding-left: 1.2%;
+                text-decoration: underline solid #707070;
+            }
+        }
+    }
+
+    &__img__text {
+        width: 100%;
+        display: flex;
+        padding: 0 0 60px 0;
+        @include mixin.breakpoint( tablet ) {
+            padding: 60px 0 57px 0;
+        };
+        @include mixin.breakpoint( sp ) {
+            height: 170px;
+            margin-bottom: 30px;
+            padding: 0;
+            overflow: hidden;
+        };
+        p {
+            font-family: "m-plus-1m", sans-serif;
+            line-height: 1.5;
+        }
+    }
+}

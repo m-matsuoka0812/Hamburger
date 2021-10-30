@@ -1,0 +1,219 @@
+//front-page設定
+@use "../../foundation/mixin";
+
+.p-front {
+    &__title {
+        font-family: "m-plus-1m", sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #fff;
+        padding-left: 86px;
+        padding-top: 231px;
+        margin: 0;
+        @include mixin.breakpoint( tablet ) {
+            padding-top: 119px;
+            font-size: 2.25rem;
+        };
+        @include mixin.breakpoint( sp ) {
+            padding-left: 6.7%;
+        };
+    }
+}
+
+.p-front {
+    &__flex {
+        height: 1447px;
+        display: flex;
+        padding: 0 7%;
+        //padding-top: 8.3%;
+        //padding-bottom: 9.3%;
+        @include mixin.breakpoint( tablet ) {
+            height: 935px;
+            padding:0 4.8%;
+        };
+        @include mixin.breakpoint( sp ) {
+            display: block;
+            height: 1374px;
+            padding: 20px 5.3% 49px 5.3%;
+        };
+        &__section {
+            position: relative;
+            //height: 100%;
+            width: 100%;
+            //background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+        h2 {
+            font-family: "roboto", sans-serif;
+            position: relative;
+            color: #fff;
+            font-size: 5vw; /*vw単位にすることで画面サイズに準ずる*/
+            font-weight: 600;
+            padding-top: 20px;
+            padding-left: 20px;
+            margin: 0;
+            @include mixin.breakpoint( tablet ) {
+                font-size: 2.75rem;
+                padding-top: 13px;
+                padding-left: 14px;
+            };
+            @include mixin.breakpoint( sp ) {
+                font-size: 2.56rem;
+                padding-top: 11px;
+                padding-left: 10px;
+            };
+            &::after {
+                position: absolute;
+                top: 140px;
+                left: 26px;
+                content: "";
+                width: 60px;
+                height: 6px;
+                background-color: #fff;
+                padding-left: 20px;
+                @include mixin.breakpoint( tablet ) {
+                    top: 91.5px;
+                    left: 14.3px;
+                    width: 35.9px;
+                    height: 4px;
+                };
+                @include mixin.breakpoint( sp ) {
+                    top: 86.3px;
+                    left: 13.5px;
+                    width: 33.9px;
+                };
+            }
+        }
+        .p-box {
+            position: absolute;
+            display: block;
+            width: 93.6%;
+            left: 3.2%;
+            right: 3.2%;
+            bottom: 1.7%;
+            @include mixin.breakpoint( sp ) {
+                left: 3%;
+                right: 3%;
+                bottom: 3%;
+            };
+            &__description {
+                height: 174px;
+                background-color: rgba(#fff, 0.6);
+                margin-top: 20px;
+                h4 {
+                    font-family: "m-plus-1m", sans-serif;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    padding: 22px 19px;
+                    color: #3C2A10;
+                    margin: 0;
+                }
+                p {
+                    font-family: "m-plus-1m", sans-serif;
+                    font-style: regular;
+                    font-size: 1rem;
+                    padding: 0 19px;
+                    color: #3C2A10;
+                    line-height: 1.5;
+                    margin: 0;
+                }
+            }
+        }   
+    }
+}
+
+.p-front {
+    &__map {
+        width: 100%;
+        height: 649px;
+        position: relative;
+        overflow: hidden;
+        @include mixin.breakpoint( tablet ) {
+            height: 415px;
+        };
+        @include mixin.breakpoint( sp ) {
+            height: 691px;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            @include mixin.breakpoint( sp ) {
+                height: 691px;
+                margin: 0 auto;
+                display: block;
+                max-width: 100%
+            };
+        }
+        &__section {
+            width: 60%;
+            height: 649px;
+            position: absolute;
+            top: 0;
+            z-index: 15;
+            @include mixin.breakpoint( tablet ) {
+                width: 100%;
+                height: 415px;
+            };
+            h3 {
+                font-family: "m-plus-1m", sans-serif;
+                font-style: bold;
+                color: #fff;
+                font-size: 2.25rem; /*vw単位にすることで画面サイズに準ずる*/
+                font-weight: normal;
+                padding: 83px 0 0 12.5%;
+                @include mixin.breakpoint( tablet ) {
+                    font-size: 1.875rem;
+                    padding: 40px 0 0 5%;
+                };
+                @include mixin.breakpoint( sp ) {
+                    padding: 40px 0 0 11.2%; 
+                };
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 90px;
+                    height: 3px;
+                    background-color: #fff;
+                    left: 12.5%;
+                    top: 189.5px;
+                    @include mixin.breakpoint( tablet ) {
+                        width: 75px;
+                        left: 5%;
+                        top: 90px;
+                    };
+                    @include mixin.breakpoint( sp ) {
+                        left: 11.2%;
+                        top: 102px;
+                        height: 2px;
+                    };
+                }
+            }
+            .p-front__map__text{
+                font-family: "m-plus-1m", sans-serif;
+                position: absolute;
+                top: 39%;
+                left: 12.5%;
+                right: 14.1%;
+                bottom: 6%;
+                color: #fff;
+                line-height: 1.5;
+                font-size: 1vw; /*vw単位にすることで画面サイズに準ずる*/
+                text-align: justify;
+                @include mixin.breakpoint( tablet ) {
+                    top: 26.5%;
+                    left: 5%;
+                    right: 3.5%;
+                    bottom: 0;
+                    font-size: 0.875rem;
+                };
+                @include mixin.breakpoint( sp ) {
+                    top: 110px;
+                    right: 10.6%;
+                    left: 10.6%;
+                    bottom: 7.4%;
+                };
+            }
+        }
+    }
+}

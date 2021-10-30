@@ -1,0 +1,139 @@
+//archive,archive-search設定
+@use "../../foundation/mixin";
+
+.p-pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: #707070;
+    padding: 75.5px 0 64px 0;
+    @include mixin.breakpoint( tablet ) {
+        padding-bottom: 34px;
+    };
+    @include mixin.breakpoint( sp ) {
+        padding-top: 49px;
+        padding-bottom: 30px;
+        height: 95px;
+    }
+    &__current__page {
+        font-family: "roboto", sans-serif;
+        font-size: 1rem;
+        padding: 0 19.3px 0 0;
+        @include mixin.breakpoint( sp ) {
+            display: none;
+        };   
+    }
+    &__list {
+        display: flex;
+        width: auto;
+        flex-direction: row;        
+        justify-content: center; 
+        align-items: center;
+        @include mixin.breakpoint( sp ) {
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 20.2px
+        };
+        .p-pagination__page {
+            border: solid 1px #3C2B1C;
+            margin-right: 15px;
+            @include mixin.breakpoint( sp ) {
+                display: flex;          
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center;
+            };
+            &:first-of-type, &:last-of-type {
+                border: none;
+                width: auto;
+                height: auto;
+            }
+            &:nth-of-type(2){
+                background-color: #3C2B1C;
+                @include mixin.breakpoint( sp ) {
+                    display: none;
+                }
+                a{
+                    color: #FFFFFF;
+                    @include mixin.breakpoint( sp ) {
+                        display: none;
+                    }
+                }
+            }
+            .p-pagination__page__number {
+                font-family: "roboto", sans-serif;
+                font-size: 1rem;
+                display: block;
+                color: #707070;
+                padding: 7px 13px;
+                @include mixin.breakpoint( sp ) {
+                    font-family: "m-plus-1m", sans-serif;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                }
+                /*p {
+                    display: none;
+                    @include sp {
+                        display: block;
+                        font-family: "m-plus-1m", sans-serif;
+                        font-size: 1rem;
+                        font-weight: normal;
+                        color: #707070;
+                        margin-left: 7.3px;
+                    };
+                }*/
+            }
+            &:not(:first-of-type):not(:last-of-type) {
+                display: flex;
+                @include mixin.breakpoint( sp ) {
+                    display: none
+                };
+            };
+            &:first-of-type {
+                margin-right: 17.2px;
+                @include mixin.breakpoint( sp ) {
+                    margin: 0;
+                };
+                .p-pagination__page__link-1 {
+                    @include mixin.breakpoint( sp ) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    };
+                    .p-pagination__previous {
+                        display: none;
+                        @include mixin.breakpoint( sp ) {
+                            display: block;
+                            font-family: "m-plus-1m", sans-serif;
+                            font-size: 1rem;
+                            font-weight: normal;
+                            color: #707070;
+                            margin-left: 7.3px;
+                        };
+                    }
+                }
+            }
+            &:last-of-type {
+                margin-left: 4.3px;
+                @include mixin.breakpoint( sp ) {
+                    margin: 0;
+                }
+                .p-pagination__next {
+                    display: none;
+                    @include mixin.breakpoint( sp ) {
+                        display: block;
+                        font-family: "m-plus-1m", sans-serif;
+                        font-size: 1rem;
+                        font-weight: normal;
+                        color: #707070;
+                        margin-right: 7.3px
+                    };
+                }
+            }
+        }
+    }
+}

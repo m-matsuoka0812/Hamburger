@@ -1,0 +1,46 @@
+//全HTML共通
+
+.l-footer {
+    width: 100%;
+    height: 150px;
+    background-image: url("../img/footer1.jpg") ;
+    background-repeat: repeat;
+    font-family: "m-plus-1m", sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    /*@include tab {
+        position: absolute;
+        top: 1677.5px;
+    };
+    @include sp {
+        position: absolute;
+        top: 2566px;
+    };*/
+    &__section {
+        padding-top: 40px;
+        padding-bottom: 34px;
+        justify-content: center;
+        align-items: center;
+        a {
+            font-size: 1.25rem;
+            padding: 0 15px;
+            &:last-of-type {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: -3px;
+                    content: "";
+                    background-color: #fff;
+                    width: 2px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    small {
+        font-size: 0.875rem;        
+    }
+}

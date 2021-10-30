@@ -1,0 +1,232 @@
+//front-page 画像設定
+@use "../../foundation/mixin";
+
+.c-media {
+    &__top__front {
+        height: 530px;
+        max-width: 100%;
+        background-image: url("../img/front-page-ダミーサイト.jpg");
+        background-size: cover;
+        background-position: center;
+        @include mixin.breakpoint( tablet ) {
+            height: 285px;
+        };
+    }
+    &__takeout {
+        background-image: url("../img/front_flex_left.jpg");
+        background-size: cover;
+        background-position: center;
+        //height: 100%;
+        margin: 8.3% 2.5% 9.3% 0;
+        @include mixin.breakpoint( tablet ) {
+            margin: 4.8% 4.8% 4.8% 0;
+        };
+        @include mixin.breakpoint( sp ) {
+            height: 50%;
+            margin: 0 0 20px 0;
+        };
+    }
+    &__eatin {
+        background-image: url("../img/front_flex_right.jpg");
+        background-size: cover;
+        background-position: center;
+        //height: 100%;
+        margin: 8.3% 0 9.3% 2.5%;
+        @include mixin.breakpoint( tablet ) {
+            margin: 4.8% 0;
+        };
+        @include mixin.breakpoint( sp ) {
+            height: 50%;
+            margin: 0;
+        };
+    }
+}
+
+//archive・archive-search 画像設定
+
+.c-media {
+    &__top__archive {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 239px;
+        background: url(../img/archive-menu.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: -5;
+        @include mixin.breakpoint( tablet ) {
+            height: 283px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: -10;
+        }
+    }
+    &__menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: left;
+        @include mixin.breakpoint( sp ) {
+            background-size: cover;
+            background-position: center;
+        };
+    }
+}
+
+//single・page 画像設定
+
+.c-media {
+    &__top__single {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        background: url(../img/single-チーズバーガー.jpg) no-repeat center;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        display: flex;
+        z-index: -5;
+        @include mixin.breakpoint( sp ) {
+            height: 225px;
+            background-size: 190%;
+        };
+    }
+}
+
+.c-media {
+    &__top {
+        width: 100%;
+        max-height: 560px;
+        object-fit: cover;
+        object-position: bottom;
+        margin-bottom: 60px;
+        //padding: 0 5.2% 60px 5.2%;
+        @include mixin.breakpoint( tablet ) {
+            max-height: 264px;
+            margin-bottom: 0;
+            //padding: 0 7.2%;
+        };
+        @include mixin.breakpoint( sp ) {
+            max-height: 154px;
+            margin-bottom: 30px;
+            //padding: 0 5.3% 30px 5.3%;
+        }    
+    }   
+    &__middle {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+        padding-right: 2%;
+        @include mixin.breakpoint( tablet ) {
+            width: 43%;
+            padding-right: 2.5%;
+        };
+        @include mixin.breakpoint( sp ) {
+            width: 45%;
+            padding-right: 2.4%;
+        };
+        >p {
+            text-align: right;
+        }
+    }
+    &__img {
+        flex-direction: row-reverse;
+        .c-media__bottom {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: top;
+            padding-left: 2%;
+            @include mixin.breakpoint( tablet ) {
+                width: 43%;
+                padding-left: 2.5%;
+            };
+            @include mixin.breakpoint( sp ) {
+                width: 45%;
+                padding-left: 2.4%;
+            };
+            >P {
+                text-align: left;
+            }
+        }
+    }
+    &__half {
+        margin-bottom: 60px;
+        text-align: center;
+        @include mixin.breakpoint( tablet ) {
+            padding-top: 4px;
+            margin-bottom: 241px;
+        };
+        @include mixin.breakpoint( sp ) {
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+        img {
+            width: 581px;
+            height: auto;
+            @include mixin.breakpoint( sp ) {
+                width: 72%;
+            };
+        }
+    }
+    &__tile {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 5.05% 0 5.2%;
+        @include mixin.breakpoint( tablet ) {
+            padding: 0 7.2%;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 20px;
+            flex-wrap: none;
+            justify-content: none;
+        };
+        @include mixin.breakpoint( sp ) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 20px;
+        }
+        img {
+            width: 32%;
+            margin-bottom: 20px;
+            @include mixin.breakpoint( tablet ) {
+                width: 100%;
+                margin-bottom: 0;
+            };
+            @include mixin.breakpoint( sp ) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//page top画像設定
+
+.c-media {
+    &__top__page {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        background: url(../img/page-ショップについて.jpg) no-repeat center;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        display: flex;
+        z-index: -5;
+        @include mixin.breakpoint( sp ) {
+            height: 225px;
+            background-size: 190%;
+        };
+    }
+}

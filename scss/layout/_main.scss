@@ -1,0 +1,57 @@
+//全HTML共通
+@use "../foundation/mixin";
+
+.l-main {
+    display: flex;
+    &__left {
+        width:  80%;
+        height: 100%;
+        min-height: 100vh;
+        @include mixin.breakpoint( tablet ) {
+            width: 100%;
+        };
+        &.is-open {
+            position: relative;
+            overflow-y: auto;
+            &::before {
+                content: "";
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, 0.5);
+                z-index: 199;
+            }
+        }
+    }
+    &__right {
+        width: 20%;
+        background-color: #F2EDE9;
+        max-height: 100%; /*footer:150pxを加味したら95％になります*/
+        @include mixin.breakpoint( tablet ) {
+            position: fixed;
+            left: 100%;
+        };
+        @include mixin.breakpoint( sp ) {
+            position: fixed;
+            left: 100%;
+        };
+        &.is-open {
+            position: fixed;
+            bottom: 0;
+            overflow-y: auto;
+            animation: SlideIn 0.5s;
+            display: block;
+            top: 0;
+            z-index: 200;
+            left: 56%;
+            width: 44%;
+            @include mixin.breakpoint( sp ) {
+                left: 12%;
+                width: 88%;
+            };
+        } 
+    }
+    &.is-open {
+        position: relative;
+    }
+}

@@ -1,0 +1,101 @@
+//single_top・text設定
+@use "../../foundation/mixin";
+
+.p-single {
+    &__top {
+    display: flex;
+    align-items: center;
+    .p-single__title {
+            font-family: "m-plus-1m", sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 3.75rem;
+            padding-left: 4.5%;
+            @include mixin.breakpoint( sp ) {
+                font-size: 2.25rem;
+                padding-left: 3.1%;
+            };
+        }
+    .p-single__subtitle {   
+            font-family: "m-plus-1m", sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 3.75rem;
+            padding-left: 20px;
+            @include mixin.breakpoint( sp ) {
+                font-size: 2.25rem;
+                padding-left: 26px;
+            };
+        }
+    }  
+    &__list {
+        width: 100%;
+        padding: 40px 5.2% 60px 7.8%;
+        font-family: "m-plus-1m", sans-serif;
+        font-size: 1rem;
+        @include mixin.breakpoint( tablet ) {
+            padding: 60px 7.2% 60px 13.2%;
+        };
+        @include mixin.breakpoint( sp ) {
+            padding: 30px 14.4%;
+        };
+        ol {
+            line-height: 1.6;
+            padding-bottom: 60px;
+            padding-left: 2.6%;
+            @include mixin.breakpoint( tablet ) {
+                padding-left: 4.2%;
+            };
+            @include mixin.breakpoint( sp ) {
+                padding-left: 7.2%;
+            };
+            li {
+                list-style: decimal;
+                ol {
+                    padding: 20px 0.95%;
+                    @include mixin.breakpoint( tablet ) {
+                        padding: 20px 2.15%;
+                    };
+                    @include mixin.breakpoint( sp ) {
+                        padding: 20px 4.8%;
+                    };
+                }
+            }
+        }
+        ul {
+            line-height: 1.6;
+            li {
+                padding: 0;
+                ul {
+                    padding: 20px 0.95%;
+                    @include mixin.breakpoint( tablet ) {
+                        padding: 20px 2.15%;
+                    };
+                    @include mixin.breakpoint( sp ) {
+                        padding: 20px 4.8%;
+                    };
+                }
+            }
+        }
+    }
+    &__code {
+        width: 89.6%;
+        height: 237px;
+        background-color: #F5F5F5;
+        margin: 0 5.2%;
+        padding: 30px 3.1% 30px 2.6%;
+        @include mixin.breakpoint( tablet ) {
+            margin: 0 7.2%;
+            padding: 30px 8.2% 30px 6%;
+        };
+        @include mixin.breakpoint( sp ) {
+            margin: 0 5.3%;
+            padding: 30px 15.7% 30px 13.3%;
+        };
+        code {
+            font-size: 1rem;
+            color: #3C2A10;
+            line-height: 1.6;
+        }
+    }   
+}
