@@ -1,7 +1,4 @@
     <?php get_header(); ?>
-    
-        <div class="l-main"> <!-- 変更 -->
-            <article class="l-main__left"> <!-- 変更 -->
                 
                 <div class="p-single c-media"> <!-- 追加 -->
                     <div class="p-single__top c-media__top__single"> <!-- 追加・追加 -->
@@ -121,7 +118,4 @@
                 
         </div>
 
-        <?php wp_footer(); ?>
-
-    </body>
-</html>
+        <?php get_footer(); ?>

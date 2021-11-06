@@ -12,7 +12,7 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'menus' );
         register_nav_menus(array(
-            'footer_nav' => esc_html__('footer navigation','Hamburger'),
+            'footer_nav' => esc_html__('footer navigation', 'Hamburger'),
             'category_nav' => esc_html__('category navigation', 'Hamburger')
         ));
     }
@@ -27,15 +27,48 @@
         }
             return $title;
         }
-    add_filter( 'pre_get_document_title', ' Hamburger_title' ); 
+    add_filter( 'pre_get_document_title', 'Hamburger_title' ); 
 
-function readScript(){
-    wp_enqueue_style( 'style',get_template_directory_uri().'/style.css', array(), '1.0.0' );
-    wp_enqueue_style( 'Font-Awesome','//use.fontawesome.com/releases/v5.15.0/css/all.css', array(), 'v5.15.0' );
-    wp_enqueue_script( 'jquery','//code.jquery.com/jquery-3.6.0.min.js',",",true);
-    wp_enqueue_script( 'jquery',get_template_directory_uri().'/js/jquery.js','jquery','1.0.0',true); //font・sidebar
+// jQuery動作
+add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+function dequeue_jquery_migrate( $scripts){
+    if(!is_admin()){    
+        $scripts->remove( 'jquery');
+    }
 }
-add_action( 'wp_enqueue_scripts',' readScript' );
+
+function Hamburger_script(){
+    wp_enqueue_style( 'Font-Awesome','//use.fontawesome.com/releases/v5.15.0/css/all.css', array(), 'v5.15.0' );
+    wp_enqueue_style( 'style', get_theme_file_uri('css/hamburger.css'), array(), '1.0.0' );
+    wp_enqueue_style( 'style', get_theme_file_uri('/style.css'), array(), '1.0.0' );
+    wp_enqueue_script( 'jquery','//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',"","3.6.0",true );
+    wp_enqueue_script( 'side-menu', get_theme_file_uri('/js/side-menu.js'), array('jquery'), '1.0.0' ,true ); //sidebar
+    wp_enqueue_script( 'Adobe-Fonts', get_theme_file_uri('/js/adobe-fonts.js'), array('jquery'), '1.0.0' ,true ); //font
+}
+add_action( 'wp_enqueue_scripts','Hamburger_script' );
+
+/*
+function load_js() {
+	//管理画面を除外
+	if ( !is_admin() ){
+		//事前に読み込まれるjQueryを解除
+		wp_deregister_script( 'jquery' );
+
+		//Google CDNのjQueryを出力
+		wp_enqueue_script( 'jquery','//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',"","3.6.0",true );
+
+		//自作スクリプトや、jQueryのライブラリも同様に読み込みます。
+		wp_enqueue_script( 'jquery', get_theme_file_uri('/js/jquery.js'), array('jquery'), '1.0.0' ,true ); //sidebar
+        wp_enqueue_script( 'Adobe-Fonts', get_theme_file_uri('/js/adobe-fonts.js'), array('jquery'), '1.0.0' ,true ); //font
+	}
+}
+add_action( 'init', 'load_js' );
+
+function my_delete_local_jquery() {
+    wp_deregister_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
+*/
 
 // *ウィジェット機能
 function Hamburger_widgets_init() {

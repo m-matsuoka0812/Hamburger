@@ -1,9 +1,6 @@
 <!-- front-page -->    
     
-    <?php get_header(); ?>
-
-        <div class="l-main"> <!-- 変更 -->
-            <article class="l-main__left"> <!-- 変更 -->             
+    <?php get_header(); ?>            
                 
                 <div class="p-front c-media"> <!-- 変更・追加 -->
                     <div class="c-media__top__front">　 <!-- 変更 -->
@@ -69,7 +66,5 @@
 
         </div>
 
-        <?php wp_footer(); ?>
-
-    </body>
-</html>
+        <?php get_footer(); ?>
+   

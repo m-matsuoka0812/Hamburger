@@ -1,9 +1,4 @@
-    <?php get_header(); ?>
-
-        <div class="l-main"> <!-- 変更 -->
-            <article class="l-main__left"> <!-- 変更 -->
-                <!-- ハンバーガーメニュー -->
-                
+    <?php get_header(); ?>              
 
                 <div class="p-archive c-media"> <!-- 追加 -->
                     <div class="c-media__top__archive"> <!-- 変更・追加 -->
@@ -79,7 +74,4 @@
                 
         </div>
 
-        <?php wp_footer(); ?>
-
-    </body>
-</html>
+        <?php get_footer(); ?>

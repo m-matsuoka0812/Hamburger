@@ -1,7 +1,10 @@
-<footer class="l-footer">
-    <div class="l-footer__section">
-        <a href="#">ショップ情報</a>
-        <a href="#">ヒストリー</a>
-    </div>
-    <small>Copyright: RaiseTech</small>
-</footer>
+        <footer class="l-footer">
+            <div class="l-footer__section">
+                <a href="<?php echo get_page_link(39); ?>">ショップ情報</a>
+                <a href="<?php echo get_page_link(41); ?>">ヒストリー</a>
+            </div>
+            <small>Copyright: RaiseTech</small>
+        </footer>
+    <?php wp_footer(); ?>
+    </body>
+</html>
