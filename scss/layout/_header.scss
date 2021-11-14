@@ -36,13 +36,15 @@
         }
     }
     &__form {
+        width: 37%;
         margin-right: 30px;
         display: flex;
         @include mixin.breakpoint( tablet ) {
-            margin-bottom: 40px;
+            margin: 0 auto 40px auto;
+            width: 65.5%;
         };
-        &__box {
-            width: 72.3%;
+        &__box {           
+            //width: 72.3%;
             height: 46px;
             background-color: #FFFFFF;
             border-radius: 0.6rem;
@@ -59,7 +61,32 @@
                 left: 6.4%;
                 margin-right: 3.2%;
             };
+            
         }
+        .svg-inline--fa.fa-w-16 {
+            width: 72.3%;
+        }
+        .fa-search {
+            color: #808080;
+            padding-right: 55%;
+            padding-left: 0%;
+            &:before {
+                content: "\f002";
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+                font-size: 1.33333em;
+                line-height: .75em;
+                vertical-align: -0.0667em;
+            }
+        }
+        /*.svg-inline--fa {
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.33333em;
+            line-height: .75em;
+            vertical-align: -0.0667em;
+        }*/
+
         &__button {
             width: 136px;
             height: 46px;

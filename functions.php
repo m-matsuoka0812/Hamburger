@@ -38,12 +38,16 @@ function dequeue_jquery_migrate( $scripts){
 }
 
 function Hamburger_script(){
+    $locale=get_locale();
+    $locale=apply_filters('theme_locale',$locale,'Hamburger');
     wp_enqueue_style( 'Font-Awesome','//use.fontawesome.com/releases/v5.15.0/css/all.css', array(), 'v5.15.0' );
+    if($locale=='ja'){
+        wp_enqueue_script( 'Adobe-Fonts', get_theme_file_uri('/js/adobe-fonts.js'), array('jquery'), '1.0.0' ,true ); //font
+    }
     wp_enqueue_style( 'style', get_theme_file_uri('css/hamburger.css'), array(), '1.0.0' );
     wp_enqueue_style( 'style', get_theme_file_uri('/style.css'), array(), '1.0.0' );
     wp_enqueue_script( 'jquery','//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',"","3.6.0",true );
     wp_enqueue_script( 'side-menu', get_theme_file_uri('/js/side-menu.js'), array('jquery'), '1.0.0' ,true ); //sidebar
-    wp_enqueue_script( 'Adobe-Fonts', get_theme_file_uri('/js/adobe-fonts.js'), array('jquery'), '1.0.0' ,true ); //font
 }
 add_action( 'wp_enqueue_scripts','Hamburger_script' );
 
@@ -74,7 +78,7 @@ add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
 function Hamburger_widgets_init() {
     register_sidebar (
         array(
-            'name'          => 'All Menu',
+            'name'          => 'Menu list',
             'id'            => 'menu_widget',
             'description'   => 'メニューの一覧です',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',

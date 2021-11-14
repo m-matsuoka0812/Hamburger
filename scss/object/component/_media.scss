@@ -5,7 +5,7 @@
     &__top__front {
         height: 530px;
         max-width: 100%;
-        background-image: url("img/front-page-ダミーサイト.jpg");
+        background-image: url("../img/front-page-ダミーサイト.jpg");
         background-size: cover;
         background-position: center;
         @include mixin.breakpoint( tablet ) {
@@ -13,7 +13,7 @@
         };
     }
     &__takeout {
-        background-image: url("img/front_flex_left.jpg");
+        background-image: url("../img/front_flex_left.jpg");
         background-size: cover;
         background-position: center;
         //height: 100%;
@@ -27,7 +27,7 @@
         };
     }
     &__eatin {
-        background-image: url("img/front_flex_right.jpg");
+        background-image: url("../img/front_flex_right.jpg");
         background-size: cover;
         background-position: center;
         //height: 100%;
@@ -51,7 +51,7 @@
         align-items: center;
         width: 100%;
         height: 239px;
-        background: url(img/archive-menu.jpg);
+        background: url(../img/archive-menu.jpg);
         background-size: cover;
         background-position: center;
         z-index: -5;
@@ -88,7 +88,7 @@
         width: 100%;
         height: 500px;
         position: relative;
-        background: url(img/single-チーズバーガー.jpg) no-repeat center;
+        background: url(../img/single-チーズバーガー.jpg) no-repeat center;
         overflow: hidden;
         object-fit: cover;
         object-position: center;
@@ -101,67 +101,86 @@
     }
 }
 
-.c-media {
-    &__top {
-        width: 100%;
-        max-height: 560px;
-        object-fit: cover;
-        object-position: bottom;
-        margin-bottom: 60px;
-        //padding: 0 5.2% 60px 5.2%;
-        @include mixin.breakpoint( tablet ) {
-            max-height: 264px;
-            margin-bottom: 0;
-            //padding: 0 7.2%;
-        };
-        @include mixin.breakpoint( sp ) {
-            max-height: 154px;
-            margin-bottom: 30px;
-            //padding: 0 5.3% 30px 5.3%;
-        }    
-    }   
-    &__middle {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        object-position: top;
-        padding-right: 2%;
-        @include mixin.breakpoint( tablet ) {
-            width: 43%;
-            padding-right: 2.5%;
-        };
-        @include mixin.breakpoint( sp ) {
-            width: 45%;
-            padding-right: 2.4%;
-        };
-        >p {
-            text-align: right;
+/* WordPress化 */
+
+.c-media__top {
+    margin: 0;
+    figure {
+        .wp-image-146 {
+            width: 1340px;
+            height: 560px;
+            object-fit: cover;
+            object-position: bottom;
+            //margin-bottom: 60px;
+            margin: 120px 0 60px 0;
+            @include mixin.breakpoint( tablet ) {
+                height: 264px;
+                //margin-bottom: 0;
+                margin: 96px 0 60px 0;
+            };
+            @include mixin.breakpoint( sp ) {
+                height: 154px;
+                margin-bottom: 30px;
+                //margin: 0 5.3% 30px 5.3%;
+            };    
+        }
+    }      
+}
+
+.c-media__middle {
+    padding: 0 0 60px 0;
+    @include mixin.breakpoint( tablet ) {
+        padding: 60px 0 57px 0;
+    };
+    figure {
+        .wp-image-146 {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: top;
+            padding-right: 2%;
+            @include mixin.breakpoint( tablet ) {
+                //width: 43%;
+                padding-right: 2.5%;
+            };
+            @include mixin.breakpoint( sp ) {
+                width: 45%;
+                padding-right: 2.4%;
+            };
         }
     }
-    &__img {
-        flex-direction: row-reverse;
-        .c-media__bottom {
+}
+
+.c-media__bottom {
+    flex-direction: row-reverse;
+    padding: 0 0 60px 0;
+    @include mixin.breakpoint( tablet ) {
+        padding: 60px 0 57px 0;
+    };
+    figure {
+        .wp-image-146 {
             width: 100%;
             height: auto;
             object-fit: contain;
             object-position: top;
             padding-left: 2%;
             @include mixin.breakpoint( tablet ) {
-                width: 43%;
+                //width: 43%;
                 padding-left: 2.5%;
             };
             @include mixin.breakpoint( sp ) {
                 width: 45%;
                 padding-left: 2.4%;
             };
-            >P {
-                text-align: left;
-            }
         }
     }
-    &__half {
+}
+
+.c-media__half {
+    figure {
         margin-bottom: 60px;
         text-align: center;
+        margin: 0;
         @include mixin.breakpoint( tablet ) {
             padding-top: 4px;
             margin-bottom: 241px;
@@ -169,8 +188,8 @@
         @include mixin.breakpoint( sp ) {
             padding-top: 0;
             margin-bottom: 30px;
-        }
-        img {
+        };
+        .wp-image-146 {
             width: 581px;
             height: auto;
             @include mixin.breakpoint( sp ) {
@@ -178,38 +197,50 @@
             };
         }
     }
-    &__tile {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0 5.05% 0 5.2%;
-        @include mixin.breakpoint( tablet ) {
-            padding: 0 7.2%;
-            display: grid;
-            justify-items: center;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px 20px;
-            flex-wrap: none;
-            justify-content: none;
-        };
-        @include mixin.breakpoint( sp ) {
-            grid-template-columns: repeat(1, 1fr);
-            row-gap: 20px;
-        }
-        img {
-            width: 32%;
-            margin-bottom: 20px;
-            @include mixin.breakpoint( tablet ) {
-                width: 100%;
-                margin-bottom: 0;
-            };
-            @include mixin.breakpoint( sp ) {
-                width: 100%;
+}
+
+.c-media__tile {
+    margin: 0;
+    .wp-block-snow-monkey-blocks-items--item--free {
+        .smb-items__item {
+            .smb-items__item__body {
+                figure {
+                    //width: 100%;
+                    //display: flex;
+                    //flex-wrap: wrap;
+                    //justify-content: space-between;
+                    //padding: 0 5.05% 0 5.2%;
+                    /*@include mixin.breakpoint( tablet ) {
+                        //padding: 0 7.2%;
+                        display: grid;
+                        justify-items: center;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 20px 20px;
+                        flex-wrap: none;
+                        justify-content: none;
+                    };
+                    @include mixin.breakpoint( sp ) {
+                        grid-template-columns: repeat(1, 1fr);
+                        row-gap: 20px;
+                    };*/
+                    .wp-image-146 {
+                        width: 100%;
+                        height: auto;
+                        //margin-bottom: 20px;
+                        @include mixin.breakpoint( tablet ) {
+                            //width: 73.7%;
+                            //margin-bottom: 0;
+                        };
+                        @include mixin.breakpoint( sp ) {
+                            //width: auto;
+                        };
+                    }
+                }
             }
         }
     }
 }
+
 
 //page top画像設定
 
@@ -218,7 +249,7 @@
         width: 100%;
         height: 500px;
         position: relative;
-        background: url(img/page-ショップについて.jpg) no-repeat center;
+        background: url(../img/page-ショップについて.jpg) no-repeat center;
         overflow: hidden;
         object-fit: cover;
         object-position: center;

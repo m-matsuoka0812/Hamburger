@@ -3,12 +3,12 @@
 
 .c-wrap {
     &__table {
-        padding: 60px 5.2%;
+        padding: 60px 0;
         @include mixin.breakpoint( tablet ) {
-            padding: 60px 7.2%;
+            padding: 60px 0;
         };
         @include mixin.breakpoint( sp ) {
-            padding: 30px 5.3%;
+            padding: 30px 0;
         }
         table {
             font-family: "m-plus-1m", sans-serif;

@@ -32,46 +32,46 @@
 
 .c-button__single {
     width: 100%;
-    padding-left: 5.2%;
+    //padding-left: 5.2%;
     padding-bottom: 60px;
     @include mixin.breakpoint( tablet ) {
-        padding-left: 7.2%;
+        //padding-left: 7.2%;
     };
     @include mixin.breakpoint( sp ) {
-        padding: 0 5.3% 30px 5.3%;
+        //padding: 0 5.3% 30px 5.3%;
     };
-    button {
+    .wp-block-button__link {
         background-color: #F2EDE9;
         border-radius: 30px;
-        a {
-            display: block;
-            width: 429px;
-            color: #3C2A10;
-            font-family: "m-plus-1m", sans-serif;
-            font-weight: bold;
-            font-size: 1rem;
-            line-height: 104px;
-            text-align: center;
-            @include mixin.breakpoint( sp ) {
-                width: 335px;
-                line-height: 77px;
-            }
-        }
+        display: block;
+        width: 429px;
+        color: #3C2A10;
+        font-family: "m-plus-1m", sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 104px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        @include mixin.breakpoint( sp ) {
+            width: auto;
+            line-height: 77px;
+        };
     }
 }
 .c-button__comment {
-    padding-left: 5.2%;
+    //padding-left: 5.2%;
     padding-bottom: 353px;
     font-size: 1rem;
     font-family: "m-plus-1m", sans-serif;
     font-weight: bold;
     color: #3C2A10;
     @include mixin.breakpoint( tablet ) {
-        padding-left: 7.2%;
+        //padding-left: 7.2%;
         padding-bottom: 228px;
     };
     @include mixin.breakpoint( sp ) {
-        padding-left: 5.3%;
+        //padding-left: 5.3%;
         padding-bottom: 177px;
     };
 }

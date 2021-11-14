@@ -79,7 +79,7 @@
                 padding-bottom: 60px;
                 text-align: justify;
             }
-            >p {
+            p {
                 padding-left: 6%;
             }
             a {
@@ -89,22 +89,22 @@
         }
     }
 
+    /* WordPress */
+
     &__img__text {
         width: 100%;
         display: flex;
-        padding: 0 0 60px 0;
-        @include mixin.breakpoint( tablet ) {
-            padding: 60px 0 57px 0;
-        };
         @include mixin.breakpoint( sp ) {
             height: 170px;
             margin-bottom: 30px;
             padding: 0;
             overflow: hidden;
         };
-        p {
-            font-family: "m-plus-1m", sans-serif;
-            line-height: 1.5;
+        .wp-block-group__inner-container {
+            .has-normal-font-size {
+                font-family: "m-plus-1m", sans-serif;
+                line-height: 1.5;
+            }
         }
     }
 }
