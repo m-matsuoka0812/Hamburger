@@ -30,81 +30,131 @@
 }
 
 //single・page comments設定
+.c-comments__block {
+    padding: 0 5.2%;
+    @include mixin.breakpoint( tablet ) {
+        padding: 0 7.2%;
+    };
+}
 
-.c-comments{
-    &__block {
-        padding: 60px 5.2%;
-        @include mixin.breakpoint( tablet ) {
-            padding: 60px 7.2%;
-        }
-        &__text {
-            *{
-                padding-bottom: 60px;
-            }
-            h2,h3,h4,h5,h6 {
+.c-comments__block__text{
+        padding: 60px 0;
+                @include mixin.breakpoint( sp ) {
+            padding: 30px 0;
+        };
+        .wp-block-group__inner-container{ 
+            .h2 {
                 font-family: "m-plus-1m", sans-serif;
                 font-weight: bold;
-            }
-            h2 {
                 font-size: 2.25rem;
+                padding-bottom: 60px;
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 30px;
+                };
             }
-            p {
+            .has-normal-font-size {
                 font-family: "m-plus-1m", sans-serif;
                 font-size: 1rem;
                 line-height: 1.6;
                 text-align: justify;
-            }
-            h3 {
-                font-size: 1.75rem;
-            }
-            h4,h5,h6 {
-                font-size: 1.25rem;
-            }
-        }
-        .c-comments__text__copy {
-            width: 100%;
-            height: auto;
-            background-color: #F5F5F5;
-            font-family: "m-plus-1m", sans-serif;
-            padding: 60px 3.1% 60px 2.6%;
-            @include mixin.breakpoint( tablet ) {
-                padding: 60px 6.7% 60px 6%;
-            }
-            * {
-                font-size: 1rem;
-            }
-            blockquote {
-                line-height: 1.5;
-                margin: 0;
                 padding-bottom: 60px;
-                text-align: justify;
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 34px;
+                };
             }
-            p {
-                padding-left: 6%;
+            .h3 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+                font-size: 1.75rem;
+                padding-bottom: 60px;
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 31px;
+                };
             }
-            a {
-                padding-left: 1.2%;
-                text-decoration: underline solid #707070;
+            .h4 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+                font-size: 1.25rem;
+                padding-bottom: 60px;
+                @include mixin.breakpoint( tablet ) {
+                    padding-bottom: 76px;
+                };
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 37px;
+                };
+            }
+            .h5 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+                font-size: 1.25rem;
+                padding-bottom: 60px;
+                @include mixin.breakpoint( sp ) {
+                    padding-bottom: 30px;
+                };
+            }
+            .h6 {
+                font-family: "m-plus-1m", sans-serif;
+                font-weight: bold;
+                font-size: 1.25rem;
             }
         }
     }
 
-    /* WordPress */
+.c-comments__text__copy {
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;
+    font-family: "m-plus-1m", sans-serif;
+    padding: 60px 3.1% 60px 2.6%;
+    @include mixin.breakpoint( tablet ) {
+        padding: 60px 6.7% 60px 6%;
+    }
+    * {
+        font-size: 1rem;
+    }
+    blockquote {
+        line-height: 1.5;
+        margin: 0;
+        padding-bottom: 60px;
+        text-align: justify;
+    }
+    p {
+        padding-left: 6%;
+    }
+    a {
+        padding-left: 1.2%;
+        text-decoration: underline solid #707070;
+    }
+}
 
-    &__img__text {
+
+
+/* WordPress */
+
+.wp-block-media-text__content {
+    padding: 0;
+    .c-comments__img__text {
         width: 100%;
         display: flex;
         @include mixin.breakpoint( sp ) {
-            height: 170px;
-            margin-bottom: 30px;
+            height: 165px;
+            //margin-bottom: 30px;
             padding: 0;
             overflow: hidden;
-        };
+        }; 
         .wp-block-group__inner-container {
+            padding: 0;
             .has-normal-font-size {
                 font-family: "m-plus-1m", sans-serif;
                 line-height: 1.5;
+                @include mixin.breakpoint( sp ) {
+                    height: 165px;
+                    //margin-bottom: 30px;
+                    padding: 0;
+                    overflow: hidden;
+                };
             }
         }
     }
 }
+        

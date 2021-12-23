@@ -81,27 +81,30 @@
     }
 }
 
-//single・page 画像設定
+// single画像 WordPress化
 
 .c-media {
     &__top__single {
-        width: 100%;
+        width: 80vw;
+        aspect-ratio: 1920 / 500;
+        padding-left: 4.5vw;
         height: 500px;
-        position: relative;
-        background: url(../img/single-チーズバーガー.jpg) no-repeat center;
-        overflow: hidden;
-        object-fit: cover;
-        object-position: center;
+        background-size: cover;
+        background-position: center center;
         display: flex;
-        z-index: -5;
+        align-items: center;
+        @include mixin.breakpoint( tablet ) {
+            width: 100%;
+            padding-left:10vw;
+        };
         @include mixin.breakpoint( sp ) {
             height: 225px;
-            background-size: 190%;
+            padding-left: 7vw;
         };
     }
 }
 
-/* WordPress化 */
+/* page画像 WordPress化 */
 
 .c-media__top {
     margin: 0;
@@ -116,21 +119,22 @@
             @include mixin.breakpoint( tablet ) {
                 height: 264px;
                 //margin-bottom: 0;
-                margin: 96px 0 60px 0;
+                margin: 60px 0;
             };
             @include mixin.breakpoint( sp ) {
                 height: 154px;
-                margin-bottom: 30px;
+                margin: 30px 0;
                 //margin: 0 5.3% 30px 5.3%;
             };    
         }
     }      
 }
 
-.c-media__middle {
-    padding: 0 0 60px 0;
+.c-media__middle,
+.wp-block-media-tex {
+    padding-bottom: 60px;
     @include mixin.breakpoint( tablet ) {
-        padding: 60px 0 57px 0;
+        padding-bottom: 30px;
     };
     figure {
         .wp-image-146 {
@@ -144,7 +148,7 @@
                 padding-right: 2.5%;
             };
             @include mixin.breakpoint( sp ) {
-                width: 45%;
+                //width: 45%;
                 padding-right: 2.4%;
             };
         }
@@ -153,9 +157,9 @@
 
 .c-media__bottom {
     flex-direction: row-reverse;
-    padding: 0 0 60px 0;
+    padding-bottom: 60px ;
     @include mixin.breakpoint( tablet ) {
-        padding: 60px 0 57px 0;
+        padding-bottom: 30px;
     };
     figure {
         .wp-image-146 {
@@ -169,7 +173,7 @@
                 padding-left: 2.5%;
             };
             @include mixin.breakpoint( sp ) {
-                width: 45%;
+                //width: 45%;
                 padding-left: 2.4%;
             };
         }

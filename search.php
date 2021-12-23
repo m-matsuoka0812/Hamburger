@@ -1,9 +1,11 @@
     <?php get_header(); ?>
 
-                <div class="p-archive c-media"> <!-- 追加 -->
-                    <div class="c-media__top__archive"> <!-- 変更・追加 -->
-                        <h2 class="p-archive__title">Search:</h2> <!-- 追加 -->
-                        <p class="p-archive__subtitle">チーズバーガー</p> <!-- 追加 -->
+                <div class="p-archive c-media">
+                    <div class="c-media__top__archive">
+                        <h2 class="p-archive__title">Search:</h2>
+                        <p class="p-archive__subtitle">
+                            <?php the_search_query(); ?>
+                        </p>
                     </div>
                 </div>
 

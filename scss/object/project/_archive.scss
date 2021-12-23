@@ -34,7 +34,7 @@
 .p-archive {
     &__card {
         display: flex;
-        padding: 0 6.44%;
+        padding: 0 6.5%;
         margin-bottom: 30px;
         width: 100%;
         height: auto;
@@ -57,7 +57,7 @@
                 height: 354.6px;
                 padding: 31.5px 21.7% 43.7px 5%;
             };
-            h3 {
+            .p-archive__card__title {
                 font-family: "m-plus-1m", sans-serif;
                 color: #fff;
                 font-size: 2.25rem;
@@ -67,7 +67,7 @@
                     font-size: 1.25rem;
                 };
             }
-            h4 {
+            .p-archive__card__subtitle {
                 font-family: "m-plus-1m", sans-serif;
                 color: #fff;
                 font-size: 1.5rem;

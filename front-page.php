@@ -1,18 +1,15 @@
 <!-- front-page -->    
     
-    <?php get_header(); ?>
-
-        <div class="l-main"> <!-- 変更 -->
-            <article class="l-main__left"> <!-- 変更 -->             
+<?php get_header(); ?>            
                 
                 <div class="p-front c-media"> <!-- 変更・追加 -->
-                    <div class="c-media__top__front">　 <!-- 変更 -->
-                        <p class="p-front__title">ダミーサイト</p> <!-- 追加 -->
+                    <div class="c-media__top__front"><!-- 変更 -->
+                        <p class="p-front__title"><?php bloginfo('description'); ?></p> <!-- 追加 -->
                     </div>
                     
                     <div class="p-front__flex">
-                        <div class="p-front__flex__section c-media__takeout"> <!-- 変更 -->
-                            <a href="#">
+                        <div class="p-front__flex__section c-media__takeout" > <!-- 変更 -->
+                            <a href="<?php echo esc_url( home_url( '/ショップ情報' ) ); ?>">
                                 <h2>Take Out</h2>
                             </a>
                             <div class="p-box">
@@ -28,17 +25,17 @@
                         </div>
                         
                         <div class="p-front__flex__section c-media__eatin"> <!-- 変更 -->
-                            <a href="#">
+                            <a href="<?php echo esc_url( home_url( '/ショップ情報' ) ); ?>">
                                 <h2>Eat In</h2>
                             </a>
                             <div class="p-box">
                                 <div class="p-box__description">
-                                    <h4>Take Out</h4>
-                                    <p>当店のテイクアウトで利用できる商品を掲載しています</p>
+                                    <h4>Eat In</h4>
+                                    <p>当店のイートインで利用できる商品を掲載しています</p>
                                 </div>
                                 <div class="p-box__description">
-                                    <h4>Take Out</h4>
-                                    <p>当店のテイクアウトで利用できる商品を掲載しています</p>
+                                    <h4>Eat In</h4>
+                                    <p>当店のイートインで利用できる商品を掲載しています</p>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +66,4 @@
 
         </div>
 
-        <?php wp_footer(); ?>
-
-    </body>
-</html>
+        <?php get_footer(); ?>

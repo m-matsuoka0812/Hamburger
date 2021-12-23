@@ -16,12 +16,12 @@ $sp: 599px;
 
 @mixin breakpoint( $point ) {
     @if $point == tablet {
-        @media ( max-width: 1023px ) { //1024px変更
+        @media ( max-width: 1024px ) { //834px変更
             @content ;
         }
     }
     @if $point == sp {
-        @media ( max-width: 639px ) { //599px変更
+        @media ( max-width: 639px ) { //375px変更
             @content ;
         }   
     }
