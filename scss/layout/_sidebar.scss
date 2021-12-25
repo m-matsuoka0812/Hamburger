@@ -22,40 +22,25 @@
         display: none;
     };
 }
-.cat-item >a {
+.l-sidebar__menu__item {
+    padding-left: 12.5%;
     font-family: "roboto", sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
     color: #707070;
-    padding-left: 12.5%;
-}
-.children {
-    padding: 40px 0 17px 18%;
-}
-.cat-item-5,
-.cat-item-6, 
-.cat-item-7, 
-.cat-item-8, 
-.cat-item-9, 
-.cat-item-10, 
-.cat-item-11, 
-.cat-item-12, 
-.cat-item-13, 
-.cat-item-14, 
-.cat-item-15, 
-.cat-item-16, 
-.cat-item-17, 
-.cat-item-18, 
-.cat-item-19, 
-.cat-item-20, 
-.cat-item-21 {
-    padding-bottom: 23px;
-    >a {
-        font-family: "m-plus-1m", sans-serif;
-        font-weight: normal;
-        font-size: 1.25rem; 
-        color: #707070;
-        padding-left: 0;
+    }
+
+.sub-menu {
+    padding: 40px 0 17px 5.5%;
+    >li {
+        padding-bottom: 23px;
+        >a {
+            font-family: "m-plus-1m", sans-serif;
+            font-weight: normal;
+            font-size: 1.25rem; 
+            color: #707070;
+            padding-left: 0;
+        }
     }
 }
 

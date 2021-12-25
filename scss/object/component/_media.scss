@@ -42,7 +42,7 @@
     }
 }
 
-//archive・archive-search 画像設定
+//archive・search 画像設定
 
 .c-media {
     &__top__archive {
@@ -68,16 +68,18 @@
         }
     }
     &__menu {
-        width: 100%;
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        object-fit: cover;
-        object-position: left;
-        @include mixin.breakpoint( sp ) {
-            background-size: cover;
-            background-position: center;
-        };
+        >img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: center;
+            @include mixin.breakpoint( sp ) {
+                background-size: cover;
+                background-position: center;
+            };
+        }
     }
 }
 

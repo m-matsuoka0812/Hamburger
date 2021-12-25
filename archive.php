@@ -38,8 +38,14 @@
                 <?php endif; ?>
 
                 <div class="p-pagination">
-                    <?php if( function_exists("the_pagination") ) the_pagination(); ?>
-                <div>
+                    <?php wp_pagenavi(); ?>
+                    
+                    <?php the_posts_navigation(array( 
+                        'next_text' => '&lt;&lt;  前へ',
+                        'prev_text' => '次へ  &gt;&gt;',
+                    )); ?>
+
+                    <div>
             </article>
 
         <?php get_sidebar(); ?>

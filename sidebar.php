@@ -2,15 +2,14 @@
     <div class="l-sidebar">
         <div class="c-button__close"></div> <!-- ハンバーガーメニュー追加 -->
         <a class="l-sidebar__menu" href="#">Menu</a>
-        <?php
-            if ( is_active_sidebar( 'menu_widget' ) ) :
-                dynamic_sidebar( 'menu_widget' );
-            else:
+
+        <?php wp_nav_menu( array(
+            'menu' => 'sidebar-menu',
+            'menu_class' => 'l-sidebar__menu__list',
+            'container' => false,
+            'theme_location' => 'side_nav',
+        ));
         ?>
-        <div class="widget">
-            <h2>No Widget</h2>
-            <p>ウィジットは設定されていません。</p>
-        </div>
-        <?php endif; ?>
+
     </div>
 </aside>
