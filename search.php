@@ -31,13 +31,14 @@
                 <?php endif; ?>
 
                 <div class="p-paginationt">
-                <?php wp_pagenavi(); ?>
-                    <!--<?php if( function_exists("the_pagination") ) the_pagination(); ?>-->
+                    <?php wp_pagenavi(); ?>
                     
                     <?php the_posts_navigation(array( 
                         'next_text' => '&lt;&lt;  前へ',
                         'prev_text' => '次へ  &gt;&gt;',
                     )); ?>
+                    <?php wp_link_pages(); ?>
+                </div>
             </article>
             
             <?php get_sidebar(); ?>

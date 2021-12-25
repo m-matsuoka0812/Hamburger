@@ -44,8 +44,8 @@
                         'next_text' => '&lt;&lt;  前へ',
                         'prev_text' => '次へ  &gt;&gt;',
                     )); ?>
-
-                    <div>
+                    <?php wp_link_pages(); ?>
+                <div>
             </article>
 
         <?php get_sidebar(); ?>
