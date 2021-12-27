@@ -12,11 +12,7 @@
                 </div>
 
                 <div class="c-comments">
-                    <!-- <?php echo category_description(); ?>-->
-                    <h4 class="c-comments__title">小見出しが入ります</h4>
-                    <p class="c-comments__text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    </p>
+                    <?php echo category_description( get_category_by_slug('burger','drink','side')->term_id ); ?>
                 </div>
 
                 <div>
@@ -44,7 +40,7 @@
                         'next_text' => '&lt;&lt;  前へ',
                         'prev_text' => '次へ  &gt;&gt;',
                     )); ?>
-                    <?php wp_link_pages(); ?>
+
                 <div>
             </article>
 

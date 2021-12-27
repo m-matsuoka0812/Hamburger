@@ -79,6 +79,11 @@ function remove_parent_theme_hook_func(){
 add_action('after_setup_theme','remove_parent_theme_hook_func');
 
 
+remove_filter ('term_description', 'wpautop'); 
+remove_filter( 'pre_term_description', 'wp_filter_kses' );
+
+
+
 //フックされている関数のチェック ※指定のアクション／フィルターフック確認関数 
 /*function show_hook_func($attr){
     global $wp_filter;

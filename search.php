@@ -9,9 +9,10 @@
                     </div>
                 </div>
 
+            
+
                 <div class="c-comments"> <!-- 変更 -->
-                    <h4 class="c-comments__title">小見出しが入ります</h4> <!-- 追加 -->
-                    <p class="c-comments__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p> <!-- 追加 -->
+                <?php echo category_description( get_category_by_slug('burger','drink','side')->term_id ); ?>
                 </div>
 
                 <?php if (have_posts()) : ?>
@@ -28,16 +29,18 @@
                     </figure>
 
                     <?php endwhile; ?>
-                <?php endif; ?>
+                    <?php else: ?>
+                        <p class="c-comments">検索結果はありませんでした</p>
+                    <?php endif; ?>
 
-                <div class="p-paginationt">
+                <div class="p-pagination">
                     <?php wp_pagenavi(); ?>
                     
                     <?php the_posts_navigation(array( 
                         'next_text' => '&lt;&lt;  前へ',
                         'prev_text' => '次へ  &gt;&gt;',
                     )); ?>
-                    <?php wp_link_pages(); ?>
+                    
                 </div>
             </article>
             
